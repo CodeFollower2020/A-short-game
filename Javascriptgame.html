@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Javascript</title>
+   
+    <style type="text/css">
+    
+         body{
+            
+            margin: 0 10px;
+            background: grey;
+        }
+    #center {
+      text-align: center;
+      margin-top: 40;
+      font-weight: bold;
+    
+        }
+        .font{
+            font-size: 70;
+        }
+        
+        #guess{
+            height: 40px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        #check{
+            height: 30px;
+            width: 200px;
+            border-radius: 10px;
+        }
+    </style>
+
+    </head>
+    
+   
+    <body>
+     <div id="center">
+    <p class="font">How many fingers am I holing up?</p>
+    
+    <p class="input"><input type="text" id="guess"></p>  <button id="check">Guess</button>
+    </div>  
+   
+    
+    
+    <script type="text/javascript">
+        
+        document.getElementById("check").onclick = function(){
+            
+            var randomNumber = Math.random();
+            
+            randomNumber = randomNumber * 6;
+            
+            randomNumber = Math.floor(randomNumber);
+            
+            if(document.getElementById("guess").value ==randomNumber)
+            {
+                alert("You are right!");
+                
+            }else{
+                alert("No.The number was" + randomNumber);
+            }
+        }
+    
+        
+        
+    </script>
+    
+    
+
+    </body>
+
+
+
+</html>
